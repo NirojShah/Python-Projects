@@ -1,7 +1,7 @@
 
 import numpy
 
-def winer(table):
+def winner(table):
     if table[0][0] == table[0][1] == table[0][2] or table[1][0] == table[1][1] == table[1][2] or table[2][0] == table[2][1] == table[2][2] or table[0][0] == table[1][1] == table[2][2] or table[0][2] == table[1][1] == table[2][0]:
         return True
 
@@ -25,7 +25,7 @@ def play():
             else:
                 table[pos1][pos2] = "X"
             print(table)
-            if winer(table) == True:
+            if winner(table) == True:
                 print(f"{p1} wins..")
                 break
         if turn == 1:
@@ -38,7 +38,7 @@ def play():
             else:
                 table[pos1][pos2] = "O"
             print(table)
-            if winer(table) == True:
+            if winner(table) == True:
                 print(f"{p2} wins..")
                 break
 
